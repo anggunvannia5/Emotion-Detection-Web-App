@@ -1,18 +1,10 @@
 import pickle
 import numpy as np
 import streamlit as st
-import os
 
-# Pastikan path file sesuai dengan struktur di GitHub
-model_path = os.path.join(os.path.dirname(__file__), "emotion_model.sav")
-vectorizer_path = os.path.join(os.path.dirname(__file__), "vectorizer.sav")
-
-# Load model dan vectorizer
-with open(model_path, "rb") as model_file:
-    model = pickle.load(model_file)
-
-with open(vectorizer_path, "rb") as vectorizer_file:
-    vectorizer = pickle.load(vectorizer_file)
+# Load saved model and vectorizer
+model = pickle.load(open('emotion_model.sav', 'rb'))
+vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
 
 # Define emotion labels
 emotions = {

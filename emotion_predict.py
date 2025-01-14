@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
 import streamlit as st
+import os
 
 # Pastikan path file sesuai dengan struktur di GitHub
 model_path = os.path.join(os.path.dirname(__file__), "emotion_model.sav")
